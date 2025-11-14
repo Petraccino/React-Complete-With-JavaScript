@@ -42,24 +42,16 @@ function App() {
           <h2>Core Concepts</h2>
           <ul>
             <CoreConcept
-              title={CORE_CONCEPTS.at(0).title}
-              description={CORE_CONCEPTS.at(0).description}
-              image={CORE_CONCEPTS.at(0).image}
+              {...CORE_CONCEPTS[0]}
             />
             <CoreConcept
-              title={CORE_CONCEPTS.at(1).title}
-              description={CORE_CONCEPTS.at(1).description}
-              image={CORE_CONCEPTS.at(1).image}
+              {...CORE_CONCEPTS[1]}
             />
             <CoreConcept
-              title={CORE_CONCEPTS.at(2).title}
-              description={CORE_CONCEPTS.at(2).description}
-              image={CORE_CONCEPTS.at(2).image}
+              {...CORE_CONCEPTS[2]}
             />
             <CoreConcept
-              title={CORE_CONCEPTS.at(3).title}
-              description={CORE_CONCEPTS.at(3).description}
-              image={CORE_CONCEPTS.at(3).image}
+              {...CORE_CONCEPTS[3]}
             />
           </ul>
         </section>
