@@ -5,8 +5,8 @@ import TabButton from "./components/TabButton/TabButton";
 
 function App() {
 
-  function handleSelected(){
-    console.log("Hello World -  selected");
+  function handleSelected(title){
+    console.log(title);
 }
 
 
@@ -26,10 +26,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton title="Component" onSelected={handleSelected}/>
-            <TabButton title="JSX"  onSelected={handleSelected}/>
-            <TabButton title="Props"  onSelected={handleSelected}/>
-            <TabButton title="State"  onSelected={handleSelected}/>
+            <TabButton title="Component" onSelected={() => handleSelected("component")}/>
+            <TabButton title="JSX"  onSelected={() => handleSelected("jsx")}/>
+            <TabButton title="Props"  onSelected={() => handleSelected("props")}/>
+            <TabButton title="State"  onSelected={() => handleSelected("state")}/>
           </menu>
           Dynamic Content
         </section>
