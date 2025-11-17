@@ -4,14 +4,25 @@ import CoreConcept from "./components/coreconcept/CoreConcept";
 import { CORE_CONCEPTS, EXAMPLES } from "./data";
 import TabButton from "./components/TabButton/TabButton";
 
-
 function App() {
-  const [selectedTopit, setSelectedTopic ] = useState("components");
+  const [selectedTopit, setSelectedTopic] = useState(null);
 
-  function handleSelected(title){
+  function handleSelected(title) {
     setSelectedTopic(title);
-}
+  }
 
+  let tabContent = <p>Please select a topic.</p>;
+  if (selectedTopit) {
+    tabContent = (
+      <div id="tab-content">
+        <h3>{EXAMPLES[selectedTopit].title}</h3>
+        <p>{EXAMPLES[selectedTopit].description}</p>
+        <pre>
+          <code>{EXAMPLES[selectedTopit].code}</code>
+        </pre>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -34,15 +45,7 @@ function App() {
             <TabButton title="Props"  onSelected={() => handleSelected("props")}/>
             <TabButton title="State"  onSelected={() => handleSelected("state")}/>
           </menu>
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopit].title}</h3>
-            <p>{EXAMPLES[selectedTopit].description}</p>
-            <pre>
-              <code>
-                {EXAMPLES[selectedTopit].code}
-              </code>
-            </pre>
-          </div>
+          {tabContent}
         </section>
       </main>
     </div>
