@@ -40,10 +40,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton title="Component" onSelected={() => handleSelected("components")}/>
-            <TabButton title="JSX"  onSelected={() => handleSelected("jsx")}/>
-            <TabButton title="Props"  onSelected={() => handleSelected("props")}/>
-            <TabButton title="State"  onSelected={() => handleSelected("state")}/>
+            <TabButton isSelected={selectedTopit === "components"} title="Component" onSelected={() => handleSelected("components")}/>
+            <TabButton isSelected={selectedTopit === "jsx"} title="JSX"  onSelected={() => handleSelected("jsx")}/>
+            <TabButton isSelected={selectedTopit === "props"} title="Props"  onSelected={() => handleSelected("props")}/>
+            <TabButton isSelected={selectedTopit === "state"} title="State"  onSelected={() => handleSelected("state")}/>
           </menu>
           {tabContent}
         </section>
