@@ -1,13 +1,13 @@
 import "./TabButton.css";
 
-export default function (props) {
+export default function ({isSelected, onSelected, title, ...props}) {
   return (
     <li>
       <button
-        className={props.isSelected ? "active" : undefined}
-        onClick={props.onSelected}
+        className={isSelected ? "active" : undefined}
+        {...props}
       >
-        {props.title}
+        {title}
       </button>
     </li>
   );
