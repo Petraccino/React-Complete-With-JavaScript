@@ -1,7 +1,6 @@
 import "./Tabs.css";
 
-export default function ({ children, buttons, buttonsContainer }) {
-    const ButtonsContainer = buttonsContainer;
+export default function ({ children, buttons, ButtonsContainer = "menu" }) {
   return (
     <>
       <ButtonsContainer>{buttons}</ButtonsContainer>
