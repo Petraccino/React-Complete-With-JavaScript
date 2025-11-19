@@ -7,6 +7,7 @@ import {
   deriveActivePlayer,
   WINNING_COMBINATIONS,
 } from "./util/Util";
+import GameOver from "./components/gameover/GameOver";
 
 function App() {
   const [gameTurns, setGameTurn] = useState([]);
@@ -36,6 +37,8 @@ function App() {
       winner = firstSquareSymbol;
     }
   }
+
+  const hasDraw = gameTurns.length === 9 && !winner;
 
   const activePlayer = deriveActivePlayer(gameTurns);
 
@@ -67,7 +70,7 @@ function App() {
             isActive={activePlayer === "O"}
           />
         </ol>
-        {winner && <p>You won, {winner}!</p>}
+        {(winner || hasDraw) && <GameOver winner={winner} hasDraw={hasDraw} />}
         <GameBoard onSelectSquare={handleActivePlayer} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
