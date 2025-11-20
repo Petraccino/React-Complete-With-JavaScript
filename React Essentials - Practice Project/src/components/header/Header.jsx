@@ -1,6 +1,5 @@
 import "./Header.css";
-import img from "../assets/investment-calculator-logo.png";
-
+import img from "../../assets/investment-calculator-logo.png"
 export default function Header() {
   return (
     <div id="header">
