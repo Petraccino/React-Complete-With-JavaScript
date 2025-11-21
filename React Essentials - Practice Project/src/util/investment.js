@@ -43,3 +43,12 @@ export const INITIAL_VALUE = {
   expectedReturn: 6,
   duration: 10
 }
+
+export const TABLE_HEADERS = {
+  year: "Year",
+  investmentValue: "Investment Value",
+  interestYear: "Interest (Year)",
+  totalInterest: "Total Interest",
+  investedCapital: "Invested Capital",
+};
+
