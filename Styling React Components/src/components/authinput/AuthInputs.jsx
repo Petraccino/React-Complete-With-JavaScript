@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AuthInputs.css";
 import { styled } from "styled-components";
-import Button from "../styled/Button.styled";
+import Button from "../styled/Button";
 import Input from "../input/Input";
 
 const ControllContainer = styled.div`
