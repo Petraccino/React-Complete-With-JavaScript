@@ -1,5 +1,13 @@
 import { useState } from "react";
 import "./AuthInputs.css";
+import { styled } from "styled-components";
+
+const ControllContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+`;
 
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -23,8 +31,8 @@ export default function AuthInputs() {
 
   return (
     <div id="auth-inputs">
-      <div className="controls">
-        <p>
+      <ControllContainer>
+        <p className="paragraph">
           <label className={`label ${emailNotValid ? "invalid" : ""}`}>
             Email
           </label>
@@ -46,7 +54,7 @@ export default function AuthInputs() {
             }
           />
         </p>
-      </div>
+      </ControllContainer>
       <div className="actions">
         <button type="button" className="text-button">
           Create a new account
