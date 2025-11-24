@@ -8,13 +8,3 @@
   background: linear-gradient(180deg, #474232 0%, #28271c 100%);
   color: white;
 }
-
-label.invalid {
-  color: #f87171;
-}
-
-input.invalid {
-  color: #ef4444;
-  border-color: #f73f3f;
-  background-color: #fed2d2;
-}
