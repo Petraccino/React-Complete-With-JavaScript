@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Task({ onAddTask, onDeleteTask }) {
+export default function Task({ onAddTask}) {
   const [enteredTask, setEnteredTask] = useState();
 
   function handleEnteredTask(event) {
