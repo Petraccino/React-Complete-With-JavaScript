@@ -6,7 +6,10 @@ export default function Header() {
   const cartCtx = use(CartContext);
   const modal = useRef();
 
-  const cartQuantity = cartCtx.items.length;
+  const cartQuantity = cartCtx.items.reduce(
+    (totalNumberOfItems, item) => totalNumberOfItems + item.quantity,
+    0
+  );
 
   function handleOpenCartClick() {
     modal.current.open();
