@@ -13,7 +13,7 @@ export default function ({ children, open, onClose }) {
 
   return createPortal(
     <dialog className="modal" ref={dialog} onClose={onClose}>
-      {children}
+      {open ? children : undefined}
     </dialog>,
     document.getElementById("modal")
   );
